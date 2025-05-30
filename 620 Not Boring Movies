@@ -1,0 +1,10 @@
+-- LeetCode: 620
+-- Problem name: Not Boring Movies
+-- https://leetcode.com/problems/not-boring-movies/
+
+Solution Query
+--
+select * from Cinema 
+where id%2<>0 and description<>"boring" 
+Order by rating DESC;
+--
