@@ -1,0 +1,12 @@
+-- LeetCode: 176
+-- Problem Name: Second Highest Salary
+-- https://leetcode.com/problems/second-highest-salary/
+
+Solution Query
+--
+Select(select distinct salary from Employee 
+where salary=(
+    select max(salary) from Employee 
+    where salary<>(select max(salary) from Employee)
+))AS SecondHighestSalary;
+--
