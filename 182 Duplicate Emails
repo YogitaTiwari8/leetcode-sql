@@ -1,0 +1,10 @@
+-- LeetCode: 182
+-- Problem name: Duplicate Emails
+-- https://leetcode.com/problems/duplicate-emails/
+
+Solution Query
+--
+select Email from Person 
+group by Email 
+having count(Email)>1;
+--
